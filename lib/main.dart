@@ -41,20 +41,26 @@ class _CalculatorAppState extends State<CalculatorApp> {
         child: SafeArea(
           child: AppBar(
             backgroundColor: Colors.grey,
-            title: Text(
-              "Radical Start",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-            ),
-            leading: Padding(
-              padding:
-                  EdgeInsets.only(left: 10), // Adjust left padding if needed
-              child: Image.network(
-                "https://res.cloudinary.com/dfpzh53td/f_auto,q_auto/radicalstart/schedulePage/Logo_ahxiux.png",
-                width: 50, // Adjust size if necessary
-                height: 50,
-                fit: BoxFit.contain,
+            title: Padding(
+              padding: EdgeInsets.only(top: 20), // Adds space from top
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start, // Align to left
+                children: [
+                  Image.network(
+                    "https://res.cloudinary.com/dfpzh53td/f_auto,q_auto/radicalstart/schedulePage/Logo_ahxiux.png",
+                    width: 40,
+                    height: 30,
+                    fit: BoxFit.contain,
+                  ),
+                  SizedBox(width: 10), // Space between logo & title
+                  Text(
+                    "Radical Start",
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
             ),
+            centerTitle: false,
           ),
         ),
       ),

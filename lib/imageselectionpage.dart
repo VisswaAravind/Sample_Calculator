@@ -30,14 +30,14 @@ class ImagePickerScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             ListTile(
-              leading: Icon(Icons.image, color: Colors.blue, size: 30),
-              title: Text("Gallery", style: TextStyle(fontSize: 18)),
-              onTap: () => controller.pickImage(ImageSource.gallery),
-            ),
-            ListTile(
               leading: Icon(Icons.camera, color: Colors.green, size: 30),
               title: Text("Camera", style: TextStyle(fontSize: 18)),
               onTap: () => controller.pickImage(ImageSource.camera),
+            ),
+            ListTile(
+              leading: Icon(Icons.image, color: Colors.blue, size: 30),
+              title: Text("Gallery", style: TextStyle(fontSize: 18)),
+              onTap: () => controller.pickImage(ImageSource.gallery),
             ),
           ],
         );
